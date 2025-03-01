@@ -43,7 +43,12 @@ processes_srt_sjf = [[1, 0, 3, 1],
              [4, 6, 5, 1],
              [5, 8, 2, 1]]
 
-completed_processes, gantt_chart = shortest_remaining_time(processes_srt_sjf)
-completed_processes, gantt_chart = shortest_job_first(processes_srt_sjf)
+completed_processes_srt, gantt_chart_srt = shortest_remaining_time(processes_srt_sjf)
+completed_processes_sjf, gantt_chart_sjf = shortest_job_first(processes_srt_sjf)
 # print(completed_processes)
-print_results(completed_processes, gantt_chart)
+print("\nShortest Remaining Time Demonstration")
+print("-" * 50)
+print_results(completed_processes_srt, gantt_chart_srt)
+print("\nShortest Job First Demonstration")
+print("-" * 50)
+print_results(completed_processes_sjf, gantt_chart_sjf)
