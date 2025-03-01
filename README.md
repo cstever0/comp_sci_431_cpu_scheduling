@@ -1,7 +1,14 @@
 # Comp-Sci 431 CPU Scheduling
+
+This is an assignment from my class Computer Science 431 - Introduction to Operating Systems. It is my own attempt to create an accurate representation of how different CPU Scheduling Algorithms handle the simultaneous execution of processes.
+
+My class and I created the function for Shortest Remaining Time Scheduling Algorithm together. I created my own interpretations of Shortest Job First and Round Robin Scheduling Algorithms. Each is located in its own .py file with the appropriate name.
+
+If you would like to run this code. Simply clone the repository and run the print_results.py with your preferred code runner.
+
 ## Section 1: Outputs
 
-This section includes the screenshots of the output from testing Shortest Remaining Time Scheduling Algorithm and Shortest Job First Scheduling Algorithm using the input provided by Figure 1. The output from testing Round Robin Scheduling Algorithm is using the input provided by Figure 2.
+This section includes the screenshots of the inputs and outputs from testing the algorithms. The Shortest Remaining Time and Shortest Job First Scheduling Algorithms use the inputs for processes shown in Figure 1. The Round Robin Scheduling Algorithm uses the inputs shown in Figure 2.
 
 ![image](resources/figure_1.PNG)
 
@@ -22,4 +29,4 @@ The biggest challenge I had with using this implementation is how I thought abou
 
 I overcame these challenges by creating a flow chart on my whiteboard that I thought would be an accurate representation of how the Algorithms should execute processes. I then used that to compare to the output I was getting from my code and make changes as necessary to reflect the correct information.
 
-There were many valuable observations I made during the implementation process. One was reaffirming the effectiveness of white boarding a coding challenge. Having a reference to what you want your code to do before you actually try implementing the code is like having a lighthouse in the distance. You may not know how to get from where you are in the dark to the lighthouse, but it gives you a direction to head in. Another valuable insight is that when the code that you are writing continues to grow and grow it often becomes more difficult to read and understand. I found that separating each of the functions into their own files made reading, understanding, and debugging the code much simpler.
+There were many valuable observations I made during the implementation process. One was reaffirming the effectiveness of whiteboarding a coding challenge. Having a reference to what you want your code to do before you actually try implementing the code is like having a lighthouse in the distance. You may not know how to get from where you are in the dark to the lighthouse, but it gives you a direction to head in. Another valuable insight is that when the code that you are writing continues to grow and grow it often becomes more difficult to read and understand. I found that separating each of the functions into their own files made reading, understanding, and debugging the code much simpler.
