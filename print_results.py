@@ -1,6 +1,7 @@
 from Process import Process
 from shortest_remaining_time import shortest_remaining_time
 from shortest_job_first import shortest_job_first
+from round_robin import round_robin
 
 def print_results(completed_processes, gantt_chart):
     """Print formatted scheduling results and metrics."""
@@ -43,8 +44,16 @@ processes_srt_sjf = [[1, 0, 3, 1],
              [4, 6, 5, 1],
              [5, 8, 2, 1]]
 
+processes_rr = [[1, 0, 2, 2],
+             [2, 1, 1, 1],
+             [3, 2, 8, 4],
+             [4, 3, 4, 2],
+             [5, 4, 5, 3]]
+
 completed_processes_srt, gantt_chart_srt = shortest_remaining_time(processes_srt_sjf)
 completed_processes_sjf, gantt_chart_sjf = shortest_job_first(processes_srt_sjf)
+completed_processes_rr, gantt_chart_rr = round_robin(processes_rr)
+
 # print(completed_processes)
 print("\nShortest Remaining Time Demonstration")
 print("-" * 50)
@@ -52,3 +61,6 @@ print_results(completed_processes_srt, gantt_chart_srt)
 print("\nShortest Job First Demonstration")
 print("-" * 50)
 print_results(completed_processes_sjf, gantt_chart_sjf)
+print("\nRound Robin Demonstration")
+print("-" * 50)
+print_results(completed_processes_rr, gantt_chart_rr)
