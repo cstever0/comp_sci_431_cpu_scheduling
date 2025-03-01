@@ -1,5 +1,4 @@
 from Process import Process
-from collections import deque
 
 # Implement the SJF (SJN) function
 def shortest_job_first(process_data):
@@ -11,7 +10,7 @@ def shortest_job_first(process_data):
     # Initialize scheduling variables
     current_time = 0 # Track current time in simulation
     completed_processes = [] # Store processes that have finished running
-    ready_queue = deque() # Store processes that have arrived but not completed
+    ready_queue = [] # Store processes that have arrived but not completed
     gantt_chart = [] # Store the execution timeline
 
     # Main scheduling loop - continue until all processes are completed
@@ -38,7 +37,7 @@ def shortest_job_first(process_data):
 
         # get the shortest job from the ready queue
         # calculate the completion time based on start time + required cpu time
-        current_process = ready_queue.popleft()
+        current_process = ready_queue.pop(0)
         start_time = max(current_time, current_process.arrival_time)
         completion_time = start_time + current_process.burst_time
 

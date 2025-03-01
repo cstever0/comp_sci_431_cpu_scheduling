@@ -1,6 +1,6 @@
 from Process import Process
 from shortest_remaining_time import shortest_remaining_time
-
+from shortest_job_first import shortest_job_first
 
 def print_results(completed_processes, gantt_chart):
     """Print formatted scheduling results and metrics."""
@@ -36,13 +36,14 @@ def print_results(completed_processes, gantt_chart):
     print(f"Average Waiting Time: {avg_waiting:.2f}")
 
 
-    # process_id, arrival_time, burst_time, priority
-processes = [[1, 0, 3, 1],
+# process_id, arrival_time, burst_time, priority
+processes_srt_sjf = [[1, 0, 3, 1],
              [2, 2, 6, 1],
              [3, 4, 4, 1],
              [4, 6, 5, 1],
              [5, 8, 2, 1]]
 
-completed_processes, gantt_chart = shortest_remaining_time(processes)
-# print(completed_processes# )
+completed_processes, gantt_chart = shortest_remaining_time(processes_srt_sjf)
+completed_processes, gantt_chart = shortest_job_first(processes_srt_sjf)
+# print(completed_processes)
 print_results(completed_processes, gantt_chart)
